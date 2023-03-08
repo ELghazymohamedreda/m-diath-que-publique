@@ -28,8 +28,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="">HOME</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="Login.php">se conecter</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="SignUp.php">inscription</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="reservation.php">reservation</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="Login.php">Logout</a></li>   
                     </ul>
                 </div>
             </div>
@@ -37,11 +37,35 @@
         <!-- Masthead-->
         <header>
             <img src="assets/img/shelf-12.jpg" alt="" style="width: 50%; margin-left:25%;">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
-            </div>
         </header>
+
+        <div class="top-nav-right container" style="margin-left: 26%">
+        <form class="form-inline" action="#" method="post" style="display: flex;">
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" name="search" placeholder="Search" style="width:10vw;">
+            </div>
+            <div class="form-group mx-sm-3 mb-3">
+                <select class="form-select" aria-label="Default select example" name="etat">
+                    <option selected name="etat">Etat</option>
+                    <option value="neuf" name="neuf">Neuf</option>
+                    <option value="occasion" name="occasion">Occasion</option>
+                </select>
+            </div>
+            <div class="form-group mx-sm-3 mb-3">
+                <select class="form-select" aria-label="Default select example" name="type">
+                    <option selected>Type</option>
+                    <option value="Livre" name="livre">Livre</option>
+                    <option value="Roman" name="roman">Roman</option>
+                    <option value="DVD" name="dvd">DVD</option>
+                    <option value="mémoire de recherche" name="memoire">Mémoire de recherche</option>
+                </select>
+            </div>
+            <button type="submit" name="recherche" class="btn btn-primary mb-2"
+                style="background-color: #DFF3FC;border:1px solid #000;color:#000;margin-top:-1%;"
+                id="btn">SEARCH</button>
+        </form>
+        </div>
+
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
