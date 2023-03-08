@@ -39,10 +39,10 @@
             <img src="assets/img/shelf-12.jpg" alt="" style="width: 50%; margin-left:25%;">
         </header>
 
-        <div class="top-nav-right container" style="margin-left: 26%">
+        <div class="top-nav-right container" style="margin-left: 25%">
         <form class="form-inline" action="#" method="post" style="display: flex;">
             <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" name="search" placeholder="Search" style="width:10vw;">
+                <input type="text" class="form-control" name="search" placeholder="Search" style="width:100%; transition: width 0.4s ease-in-out;">
             </div>
             <div class="form-group mx-sm-3 mb-3">
                 <select class="form-select" aria-label="Default select example" name="etat">
@@ -60,9 +60,11 @@
                     <option value="mémoire de recherche" name="memoire">Mémoire de recherche</option>
                 </select>
             </div>
+            <div style="margin: bottom 10px; width: 20%;">
             <button type="submit" name="recherche" class="btn btn-primary mb-2"
-                style="background-color: #DFF3FC;border:1px solid #000;color:#000;margin-top:-1%;"
+                style="background-color: #DFF3FC;border:1px solid #000;color:#000; "
                 id="btn">SEARCH</button>
+            </div>
         </form>
         </div>
 
@@ -85,7 +87,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                            <img class="img-fluid" src="Webp.webp" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -280,7 +282,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"> فن اللامبالاة</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -288,12 +290,20 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="Webp.webp" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4">كتاب فن اللامبالاة: لعيش حياة تخالف المألوف تأليف مارك مانسون .. ظل يُقال لنا طيلة عشرات السنوات إن التفكير الإيجابي هو المفتاح إلى حياة سعيدة ثرية. لكن مارك مانسون يشتم تلك "الإيجابية" ويقول: " فلنكن صادقين، السيء سيء وعلينا أن نتعايش مع هذا ". لا يتهرّب مانسون من الحقائق ولا يغلفها بالسكّر، بل يقولها لنا كما هي: جرعة من الحقيقة الفجِّة الصادقة المنعشة هي ما ينقصنا اليوم.
+                                    هذا الكتاب ترياق للذهنية التي نهدهد أنفسنا بها، ذهنية " فلنعمل على أن يكون لدينا كلنا شعور طيب " التي غزت المجتمع المعاصر فأفسدت جيلًا بأسره صار ينال ميداليات ذهبية لمجرد الحضور إلى المدرسة.
+                                    ينصحنا مانسون بأن نعرف حدود إمكاناتنا وأن نتقبلها. وأن ندرك مخاوفنا ونواقصنا وما لسنا واثقين منه، وأن نكفّ عن التهرب والفرار من ذلك كله ونبدأ مواجهة الحقائق الموجعة، حتى نصير قادرين على العثور على ما نبحث عنه من جرأة ومثابرة وصدق ومسؤولية وتسامح وحب للمعرفة.
+                                    لا يستطيع كل شخص أن يكون متميزًا متفوقًا. ففي المجتمع ناجحين وفاشلين؛ وقسم من هذا الواقع ليس عادلًا وليس نتيجة غلطتك أنت. وصحيح أن المال شيء حسن، لكن اهتمامك بما تفعله بحياتك أحسن كثيرًا؛ فالتجربة هي الثروة الحقيقية.
+                                    إنها لحظة حديث حقيقي صادق لشخص يمسكك من كتفيك وينظر في عينيك. هذا الكتاب صفعة منعشة لهذا الجيل حتى تساعده في عيش حياة راضية مستقرة. </p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
+                                    </button>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Reservation
                                     </button>
                                 </div>
                             </div>
