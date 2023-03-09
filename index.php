@@ -159,6 +159,42 @@
                     </a>
                 </div>
             </div>
+                      <!-- ====================Display data info in card html ===================-->
+          <?php
+          
+          $con = mysqli_connect('localhost', 'Root', '', 'bibliothèque');
+          $idClient  = $_SESSION['ID_ouvrage'];
+
+
+
+          $result = mysqli_query($con, "SELECT * FROM Ouvrage ");
+          $row = mysqli_fetch_assoc($result);
+          $data = array();
+          while ($row = mysqli_fetch_assoc($result)) {
+            $id_ouvrage=$row["id_ouvrage"];
+            $data[] = $row;
+            }
+          ?>
+
+           
+                
+                
+                <div id="infoModal" style="width:250px">
+                  <h5 class="modal-title" id="exampleModalLabel"><span>Titre :</span> <?php echo $row['titre']; ?></h5>
+                  <p class="card-text"><span>Nom auteur :</span> <?php echo $row['nom_auteur']; ?></p>
+                  <p class="card-text"><span>Type :</span> <?php echo $row['type']; ?> </p>
+                  <p class="card-text"><span>Etat :</span> <?php echo $row['etat']; ?></p>
+                  <p class="card-text"><span>Nombre page :</span> <?php echo $row['nombre_page']; ?></p>
+                  <div class="btnmod">
+                    <button type="button" class="modbuttons" class="btn btn-primary" id="<?php echo $row['ID_ouvrage']; ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Voir plus
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          
         </section>
         <!-- Contact Section-->
         <section class="page-section" id="contact">
