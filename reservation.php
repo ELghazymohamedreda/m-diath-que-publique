@@ -39,35 +39,9 @@
             <img src="imgs/vecteezy_opening-student-textbooks_10682255.jpg" alt="" style="width: 20%;">
             </div>
         </header>
-        <table class="table" style="margin-top: 7%;">
-        <thead>
-        <tr>
-        <th scope="col">Livre</th>
-        <th scope="col">Page</th>
-        <th scope="col">Etat</th>
-        <th scope="col">Date reservation </th>
-        </tr>
-        </thead>
-        <tbody class="table-group-divider">
-        <tr>
-        <td></td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        </tr>
-        <tr>
-        <td></td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-        <tr>
-        <td></td>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        </tr>
-        </tbody>
-        </table>
+
+
+
 
         
         <!-- Portfolio Modal 6-->
