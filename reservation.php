@@ -40,7 +40,7 @@
             </div>
         </header>
 
-
+    
         
         <!-- Portfolio Modal 6-->
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">

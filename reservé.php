@@ -34,5 +34,105 @@
             </div>
         </nav>
 
+        <header>
+            <div style=" display: flex; justify-content: center ; margin-top: 15%;">
+            <img src="imgs/vecteezy_opening-student-textbooks_10682255.jpg" alt="" style="width: 20%;">
+            </div>
+        </header>
+
+        <?php
+// Connexion à la base de données
+$servername = "localhost";
+$username = "Root";
+$password = "";
+$dbname = "bibliothèque";
+
+$con = new mysqli($servername, $username, $password, $dbname);
+
+// Vérification de la connexion
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+// Récupération des informations de la base de données
+$sql = "SELECT * FROM Ouvrage";
+$result = $con->query($sql);
+
+if ($result->num_rows > 0) {
+    // Affichage des informations dans une carte modale en HTML
+    while($row = $result->fetch_assoc()) {
+        echo '<div class="card">';
+        echo '<div class="card-body">';
+        echo '<div style="display:flex;">';
+        echo '<div>';
+        echo '<img src="photo/'. $row["url_image"].'" style="width:200px">';
+        echo '</div>';
+        echo '<div style="margin-left:15%;">';
+        echo '<h5 class="card-title"><span style="font-weight:bold;">Titre :</span> ' . $row["titre"] . '</h5>';
+        echo '<p class="card-text">' . $row["nom_auteur"] . '</p>';
+        echo '<p class="card-text">' . $row["type"] . '</p>';
+        echo '<p class="card-text">' . $row["date_achat"] . '</p>';
+        echo '<p class="card-text">' . $row["etat"] . '</p>';
+        echo '<p class="card-text">' . $row["nombre_page"] . '</p>';
+        echo '<p class="card-text">' . $row["date_dédition"] . '</p>';    
+        echo '</div>';   
+        echo '</div>';
+        echo '<button  name="" class="form-control btn btn-success submit px-3">Modifier</button>';
+        echo '<button  name="idDelet" class="form-control btn btn-danger  px-2">Suprimer</button>';
+        echo '</div>';
+        echo '</div>';
+        
+        
+        // Affichage de la carte modale
+        echo '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">';
+        echo '<div class="modal-dialog" role="document">';
+        echo '<div class="modal-content">';
+        echo '<div class="modal-header">';
+        echo '<div class="modal-body">';
+        echo '<img src="photo/'. $row["url_image"].'" style="width:200px">';
+        echo '</div>';
+        echo '<h5 class="modal-title">' . $row["titre"] . '</h5>';
+        echo '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
+        echo '<span aria-hidden="true">&times;</span>';
+        echo '</button>';
+        echo '</div>';
+        echo '<div class="modal-body">';
+        echo '<p>' . $row["nom_auteur"] . '</p>';
+        echo '</div>';
+        echo '<div class="modal-body">';
+        echo '<p>' . $row["type"] . '</p>';
+        echo '</div>';
+        echo '<div class="modal-body">';
+        echo '<p>' . $row["date_achat"] . '</p>';
+        echo '</div>';
+        echo '<div class="modal-body">';
+        echo '<p>' . $row["etat"] . '</p>';
+        echo '</div>';
+        echo '<div class="modal-body">';
+        echo '<p>' . $row["nombre_page"] . '</p>';
+        echo '</div>';
+        echo '<div class="modal-body">';
+        echo '<p>' . $row["date_dédition"] . '</p>';
+        echo '</div>';
+        echo '<div class="modal-footer">';
+        echo '<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
+} else {
+    echo "0 résultats";
+}
+
+// Fermeture de la connexion à la base de données
+$con->close();
+
+
+
+
+
+?>
+
     </body>
 </html>

@@ -66,11 +66,11 @@
                   <div class="form-group mx-sm-3 mb-3">
                 <select  name="etat">
                     <option selected name="etat">Etat</option>
-                    <option value="neuf" name="neuf">neuf</option> 
+                    <option value="neuf" name="neuf">Neuf</option> 
                     <option value="Bon état" name="Bon état">Bon état</option>
                     <option value="Acceptable" name="Acceptable">Acceptable</option>
                     <option value="neuf" name="neuf"></option>
-                    <option value="occasion" name="occasion">occasion</option>
+                    <option value="occasion" name="occasion">Occasion</option>
                 </select>
             </div>
             <div class="form-group mx-sm-3 mb-3">

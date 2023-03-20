@@ -102,23 +102,33 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo '<div class="card">';
         echo '<div class="card-body">';
+        echo '<div style="display:flex;">';
+        echo '<div>';
+        echo '<img src="photo/'. $row["url_image"].'" style="width:200px">';
+        echo '</div>';
+        echo '<div style="margin-left:15%;">';
         echo '<h5 class="card-title">' . $row["titre"] . '</h5>';
-        echo '<p class="card-text">' . $row["nom_auteur"] . '</p>';
-        echo '<p class="card-text">' . $row["type"] . '</p>';
-        echo '<p class="card-text">' . $row["date_achat"] . '</p>';
-        echo '<p class="card-text">' . $row["etat"] . '</p>';
-        echo '<p class="card-text">' . $row["nombre_page"] . '</p>';
-        echo '<p class="card-text">' . $row["date_dédition"] . '</p>';
-        // echo '<a href="#" class="card-link" data-toggle="modal" data-target="#myModal">reservation</a>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Nom auteur :</span>' . $row["nom_auteur"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Type :</span>' . $row["type"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Date achat :</span>' . $row["date_achat"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Etat :</span>' . $row["etat"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Nombre de page :</span>' . $row["nombre_page"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Date éditon :</span>' . $row["date_dédition"] . '</p>';    
+        echo '</div>';   
+        echo '</div>';
         echo '<button  name="reserve" class="form-control btn btn-success submit px-3">Reservation</button>';
         echo '</div>';
         echo '</div>';
+        
         
         // Affichage de la carte modale
         echo '<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">';
         echo '<div class="modal-dialog" role="document">';
         echo '<div class="modal-content">';
         echo '<div class="modal-header">';
+        echo '<div class="modal-body">';
+        echo '<img src="photo/'. $row["url_image"].'" style="width:200px">';
+        echo '</div>';
         echo '<h5 class="modal-title">' . $row["titre"] . '</h5>';
         echo '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
         echo '<span aria-hidden="true">&times;</span>';
