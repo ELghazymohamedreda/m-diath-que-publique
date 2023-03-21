@@ -40,7 +40,7 @@
         </header>
 
         <div class="top-nav-right container" style="margin-left: 25%">
-        <form class="form-inline" action="#" method="post" style="display: flex;">
+        <form class="form-inline" action="" method="post" style="display: flex;">
             <div class="form-group mx-sm-3 mb-2">
                 <input type="text" class="form-control" name="search" placeholder="Search" style="width:100%; transition: width 0.4s ease-in-out;">
             </div>
@@ -61,12 +61,13 @@
                 </select>
             </div>
             <div style="margin: bottom 10px; width: 20%;">
-            <button type="submit" name="recherche" class="btn btn-primary mb-2"
+            <button type="submit" name="recherche" class="btn btn-success mb-2"
                 style="background-color: #DFF3FC;border:1px solid #000;color:#000; "
                 id="btn">SEARCH</button>
             </div>
         </form>
         </div>
+
 
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
@@ -94,10 +95,36 @@ if ($con->connect_error) {
 }
 
 // Récupération des informations de la base de données
-$sql = "SELECT * FROM Ouvrage";
-$result = $con->query($sql);
+$sql = "";
+$result = "";
 
-if ($result->num_rows > 0) {
+
+  if(isset($_POST['search'])){
+     $search = $_POST['search'];
+     $etat = $_POST['etat'];
+     $type = $_POST['type'];
+
+     if($search!="" ){
+        $sql="SELECT * FROM Ouvrage WHERE titre ='$search'";
+        $result= mysqli_query($con,$sql);
+
+     }
+     elseif($search!="" && $etat!=""){
+     $sql="SELECT * FROM Ouvrage WHERE titre = $search and etat = $etat ";
+     $result= mysqli_query($con,$sql);
+     }
+     elseif($search!="" && $etat!="" && $type!=""){
+     $sql="SELECT * FROM Ouvrage WHERE titre = $search and etat = $etat and 'type' = $type ";
+     $result= mysqli_query($con,$sql);
+     }
+
+    }else{
+        $sql="SELECT * FROM Ouvrage";
+        $result= mysqli_query($con,$sql);
+
+    }
+
+if (mysqli_num_rows($result) != 0) {
     // Affichage des informations dans une carte modale en HTML
     while($row = $result->fetch_assoc()) {
         echo '<div class="card">';

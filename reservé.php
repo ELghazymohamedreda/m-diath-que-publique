@@ -69,19 +69,19 @@ if ($result->num_rows > 0) {
         echo '</div>';
         echo '<div style="margin-left:15%;">';
         echo '<h5 class="card-title"><span style="font-weight:bold;">Titre :</span> ' . $row["titre"] . '</h5>';
-        echo '<p class="card-text">' . $row["nom_auteur"] . '</p>';
-        echo '<p class="card-text">' . $row["type"] . '</p>';
-        echo '<p class="card-text">' . $row["date_achat"] . '</p>';
-        echo '<p class="card-text">' . $row["etat"] . '</p>';
-        echo '<p class="card-text">' . $row["nombre_page"] . '</p>';
-        echo '<p class="card-text">' . $row["date_dédition"] . '</p>';    
+        echo '<p class="card-text"><span style="font-weight:bold;">Nom auteur :</span> ' . $row["nom_auteur"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Type :</span> ' . $row["type"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Date achat :</span> ' . $row["date_achat"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Etat :</span> ' . $row["etat"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Nombre page :</span> ' . $row["nombre_page"] . '</p>';
+        echo '<p class="card-text"><span style="font-weight:bold;">Date édition :</span> ' . $row["date_dédition"] . '</p>';    
         echo '</div>';   
         echo '</div>';
         echo '<form action="delete.php" method="Post">
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <input type="submit" class="btn btn-outline-dark mt-auto" value="edit">
+                            <input type="submit" class="btn btn-outline-success mt-auto" value="edit">
                             <input type="hidden" name="idDelet" value="'.$row['ID_ouvrage'].'">
-                            <input type="submit" class="btn btn-outline-dark mt-auto" value="delete">
+                            <input type="submit" class="btn btn-outline-danger mt-auto" value="delete">
                         </div>
                     </div>
                 </div>
