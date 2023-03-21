@@ -77,8 +77,15 @@ if ($result->num_rows > 0) {
         echo '<p class="card-text">' . $row["date_dédition"] . '</p>';    
         echo '</div>';   
         echo '</div>';
-        echo '<button  name="" class="form-control btn btn-success submit px-3">Modifier</button>';
-        echo '<button  name="idDelet" class="form-control btn btn-danger  px-2">Suprimer</button>';
+        echo '<form action="delete.php" method="Post">
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <input type="submit" class="btn btn-outline-dark mt-auto" value="edit">
+                            <input type="hidden" name="idDelet" value="'.$row['ID_ouvrage'].'">
+                            <input type="submit" class="btn btn-outline-dark mt-auto" value="delete">
+                        </div>
+                    </div>
+                </div>
+                </form>';
         echo '</div>';
         echo '</div>';
         
